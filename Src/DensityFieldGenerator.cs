@@ -13,8 +13,9 @@ public class DensityFieldGenerator : MonoBehaviour {
     public float floorHeight;
     public float ceilHeight;
     public int numOctaves;
-
-	public float density(Vector3 pos)
+    
+    // density function, you can make this whatever you want
+    public float density(Vector3 pos)
     {
         float density;
         if (isPlanet)
@@ -38,7 +39,7 @@ public class DensityFieldGenerator : MonoBehaviour {
         return density;
     } //density function 
     
-
+    
     public float[,,] sampleField(Vector3 origin, float cellWidth, int xDim, int yDim, int zDim)
     {
         float[,,] densityField = new float[xDim, yDim, zDim];
@@ -56,7 +57,8 @@ public class DensityFieldGenerator : MonoBehaviour {
         }
         return densityField;
     }
-
+    
+    // 3d perlin noise
     private float perlinNoise3D(Vector3 pos)
     {
         pos += new Vector3(1000, 8770, 2938);

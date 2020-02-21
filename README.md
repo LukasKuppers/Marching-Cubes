@@ -1,5 +1,5 @@
 # Marching-Cubes
-
+<img src="Images/MarchingCubesCover.PNG">
 Marching Cubes algorithm implemented in Unity. The marching Cubes algorithm is used to create 3D iso-surfaces that model density fields, And is commonly used to generate procedurally generated terrain.
 
 ### Usage
@@ -17,6 +17,9 @@ To use this implementation just download the files and import them into a new pr
 - Threshold is the value in the density field where the surface of the mesh should lie
 - Color grad is a gradient which determines the color of individual verticies based on their height
 
+<img src="Images/MC_isofieldGenDemo.gif" width="70%" height="70%">
+A quick demo of playing with the size, resolution, and threshold parameters
+
 #### Density Field Generator Interface:
 Any density field could be used here, but this script alows for some simple terrain generation over flat ground or as a planet
 
@@ -27,6 +30,10 @@ Any density field could be used here, but this script alows for some simple terr
 - Persistence controls the rate at which amplitude changes between octaves, persistence and lacurnarity should be inversely proportional
 - Floor and Ceil height can be used to create a general floor and ceiling level in the terrain (ceil should probably be greater than floor...)
 - Num Octaves controls the number of octaves that are layered on eachother, more octaves means more detail
+
+<img src="Images/MC_AmplitudeDemo.gif" width="50%" height = "50%"><img src="Images/MC_CeilDemo.gif" width="50%" height = "50%">
+
+Playing with the amplitude, ceil, and floor parameters
 
 ### Technical Details and recommendations
 
